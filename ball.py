@@ -19,15 +19,33 @@ class Ball(Turtle):
 
 
 
+    def update_y(self):
+        y = random.randint(0,490)
+        h = random.randint(0,1)
+        if h==0:
+            self.y_step=y
+        else:
+            self.y_step=-y
+
+    def update_x(self):
+        x = random.randint(0,50)
+        h = random.randint(0,1)
+        if h==0:
+            self.x_step=x
+        else:
+            self.x_step=-x
         
+  
     
 
     def bounce(self, i):
         
         if i==0 :
+            #self.x_step = random.randint(15,25)
             self.x_step*=-1
             
         else:
+            #self.y_step = random.randint(15,25)
             self.y_step*=-1
             
 
